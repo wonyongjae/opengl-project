@@ -1,0 +1,38 @@
+# 컴파일된 바이너리 파일
+*.exe
+*.out
+*.app
+
+# 디렉토리
+x64/
+build/
+bin/
+
+# OS 및 IDE 자동 생성 파일
+*.log
+*.tmp
+*.swp
+*.swo
+
+# 빌드 아티팩트
+*.o
+*.obj
+*.pdb
+
+# IDE 및 빌드 시스템 파일
+.vs/
+.vscode/
+CMakeCache.txt
+CMakeFiles/
+
+# 디버그 및 릴리스 빌드
+Debug/
+Release/
+
+# 사용자별 설정 파일
+*.suo
+*.user
+*.ncb
+*.sdf
+*.opensdf
+*.suo
