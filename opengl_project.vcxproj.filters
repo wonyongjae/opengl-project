@@ -28,6 +28,9 @@
       <Filter>소스 파일\manager</Filter>
     </ClCompile>
     <ClCompile Include="G_Scene.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="G_InputMgr.cpp">
       <Filter>소스 파일\manager</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,11 +38,14 @@
     <ClInclude Include="G_WindowMgr.h">
       <Filter>헤더 파일\manager</Filter>
     </ClInclude>
-    <ClInclude Include="G_Scene.h">
-      <Filter>헤더 파일\manager</Filter>
-    </ClInclude>
     <ClInclude Include="common.hpp">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="G_Scene.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="G_InputMgr.h">
+      <Filter>헤더 파일\manager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
