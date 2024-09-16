@@ -36,7 +36,7 @@ void G_InputMgr::keyboardCallback(GLFWwindow* arg_window, int arg_key, int arg_s
 
 void G_InputMgr::mouseCursorPosCallback(GLFWwindow* arg_window, double arg_x, double arg_y)
 {
-    std::cout << "mouse pos " << arg_x << ", " << arg_y << std::endl;
+    //std::cout << "mouse pos " << arg_x << ", " << arg_y << std::endl;
 }
 
 void G_InputMgr::mouseButtonCallback(GLFWwindow* arg_window, int arg_button, int arg_action, int arg_Mode)

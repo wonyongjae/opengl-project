@@ -19,6 +19,24 @@
     <Filter Include="헤더 파일\manager">
       <UniqueIdentifier>{724b665a-173f-47bf-88d6-2dfba0101714}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\ogldev">
+      <UniqueIdentifier>{702c759b-3f32-448d-90fb-90c74d77b80c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\ogldev">
+      <UniqueIdentifier>{3593948d-b274-4f90-8fb1-153ddef63fc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\assets">
+      <UniqueIdentifier>{f308d168-948b-4261-9275-da50b308ceb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\assets\shaders">
+      <UniqueIdentifier>{7cf3a073-c40b-43ec-85f4-792e539a2d49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\assets\textures">
+      <UniqueIdentifier>{66b235b8-7963-4e50-b434-c1e20d9823f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\assets\models">
+      <UniqueIdentifier>{9efb1568-3d7d-4ec5-81cd-03c023a53278}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -31,6 +49,33 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="G_InputMgr.cpp">
+      <Filter>소스 파일\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="G_Renderer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="dependency\ogldev\math_3d.cpp">
+      <Filter>소스 파일\ogldev</Filter>
+    </ClCompile>
+    <ClCompile Include="dependency\ogldev\ogldev_basic_glfw_camera.cpp">
+      <Filter>소스 파일\ogldev</Filter>
+    </ClCompile>
+    <ClCompile Include="dependency\ogldev\ogldev_texture.cpp">
+      <Filter>소스 파일\ogldev</Filter>
+    </ClCompile>
+    <ClCompile Include="dependency\ogldev\ogldev_util.cpp">
+      <Filter>소스 파일\ogldev</Filter>
+    </ClCompile>
+    <ClCompile Include="dependency\ogldev\ogldev_world_transform.cpp">
+      <Filter>소스 파일\ogldev</Filter>
+    </ClCompile>
+    <ClCompile Include="dependency\ogldev\technique.cpp">
+      <Filter>소스 파일\ogldev</Filter>
+    </ClCompile>
+    <ClCompile Include="dependency\ogldev\stb_image.cpp">
+      <Filter>소스 파일\ogldev</Filter>
+    </ClCompile>
+    <ClCompile Include="G_CameraMgr.cpp">
       <Filter>소스 파일\manager</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,5 +92,46 @@
     <ClInclude Include="G_InputMgr.h">
       <Filter>헤더 파일\manager</Filter>
     </ClInclude>
+    <ClInclude Include="G_Renderer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="dependency\ogldev\ogldev_basic_glfw_camera.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependency\ogldev\ogldev_math_3d.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependency\ogldev\ogldev_texture.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependency\ogldev\ogldev_types.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependency\ogldev\ogldev_util.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependency\ogldev\ogldev_world_transform.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependency\ogldev\technique.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependency\ogldev\stb_image.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependency\ogldev\stb_image_write.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="G_CameraMgr.h">
+      <Filter>헤더 파일\manager</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resource\assets\shaders\cube.fs">
+      <Filter>리소스 파일\assets\shaders</Filter>
+    </None>
+    <None Include="resource\assets\shaders\cube.vs">
+      <Filter>리소스 파일\assets\shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>
