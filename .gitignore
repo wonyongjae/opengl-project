@@ -7,7 +7,6 @@
 x64/
 build/
 bin/
-dependency/
 
 # OS 및 IDE 자동 생성 파일
 *.log
