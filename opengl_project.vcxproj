@@ -128,7 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dependency\ogldev\math_3d.cpp" />
+    <ClCompile Include="dependency\ogldev\ogldev_atb.cpp" />
     <ClCompile Include="dependency\ogldev\ogldev_basic_glfw_camera.cpp" />
+    <ClCompile Include="dependency\ogldev\ogldev_basic_lighting.cpp" />
+    <ClCompile Include="dependency\ogldev\ogldev_basic_mesh.cpp" />
+    <ClCompile Include="dependency\ogldev\ogldev_new_lighting.cpp" />
+    <ClCompile Include="dependency\ogldev\ogldev_shadow_mapping_technique.cpp" />
+    <ClCompile Include="dependency\ogldev\ogldev_skinned_mesh.cpp" />
+    <ClCompile Include="dependency\ogldev\ogldev_skinning_technique.cpp" />
     <ClCompile Include="dependency\ogldev\ogldev_texture.cpp" />
     <ClCompile Include="dependency\ogldev\ogldev_util.cpp" />
     <ClCompile Include="dependency\ogldev\ogldev_world_transform.cpp" />
@@ -143,8 +150,20 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.hpp" />
+    <ClInclude Include="dependency\ogldev\ogldev_atb.h" />
     <ClInclude Include="dependency\ogldev\ogldev_basic_glfw_camera.h" />
+    <ClInclude Include="dependency\ogldev\ogldev_basic_lighting.h" />
+    <ClInclude Include="dependency\ogldev\ogldev_basic_mesh.h" />
+    <ClInclude Include="dependency\ogldev\ogldev_engine_common.h" />
+    <ClInclude Include="dependency\ogldev\ogldev_keys.h" />
+    <ClInclude Include="dependency\ogldev\ogldev_lights_common.h" />
+    <ClInclude Include="dependency\ogldev\ogldev_material.h" />
     <ClInclude Include="dependency\ogldev\ogldev_math_3d.h" />
+    <ClInclude Include="dependency\ogldev\ogldev_mesh_common.h" />
+    <ClInclude Include="dependency\ogldev\ogldev_new_lighting.h" />
+    <ClInclude Include="dependency\ogldev\ogldev_shadow_mapping_technique.h" />
+    <ClInclude Include="dependency\ogldev\ogldev_skinned_mesh.h" />
+    <ClInclude Include="dependency\ogldev\ogldev_skinning_technique.h" />
     <ClInclude Include="dependency\ogldev\ogldev_texture.h" />
     <ClInclude Include="dependency\ogldev\ogldev_types.h" />
     <ClInclude Include="dependency\ogldev\ogldev_util.h" />

@@ -24,22 +24,9 @@ public:
 	bool init();
 
 	// 임시
-	void initCube();
-	void renderCube();
-	void compileShaders();
-	void addShader(GLuint ShaderProgram, const char* pShaderText, GLenum ShaderType);
+	void render();
 private:
 	G_Renderer() {};
 	~G_Renderer() {};
-
-	// 임시
-	GLuint m_VBO;
-	GLuint m_IBO;
-	GLuint ShaderProgram;
-	GLuint gWVPLocation;
-	WorldTrans CubeWorldTransform;
-	const char* pVSFileName = "resource/assets/shaders/cube.vs";
-	const char* pFSFileName = "resource/assets/shaders/cube.fs";
-
 };
 

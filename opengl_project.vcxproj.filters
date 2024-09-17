@@ -78,6 +78,27 @@
     <ClCompile Include="G_CameraMgr.cpp">
       <Filter>소스 파일\manager</Filter>
     </ClCompile>
+    <ClCompile Include="dependency\ogldev\ogldev_basic_lighting.cpp">
+      <Filter>소스 파일\ogldev</Filter>
+    </ClCompile>
+    <ClCompile Include="dependency\ogldev\ogldev_basic_mesh.cpp">
+      <Filter>소스 파일\ogldev</Filter>
+    </ClCompile>
+    <ClCompile Include="dependency\ogldev\ogldev_shadow_mapping_technique.cpp">
+      <Filter>소스 파일\ogldev</Filter>
+    </ClCompile>
+    <ClCompile Include="dependency\ogldev\ogldev_skinned_mesh.cpp">
+      <Filter>소스 파일\ogldev</Filter>
+    </ClCompile>
+    <ClCompile Include="dependency\ogldev\ogldev_skinning_technique.cpp">
+      <Filter>소스 파일\ogldev</Filter>
+    </ClCompile>
+    <ClCompile Include="dependency\ogldev\ogldev_atb.cpp">
+      <Filter>소스 파일\ogldev</Filter>
+    </ClCompile>
+    <ClCompile Include="dependency\ogldev\ogldev_new_lighting.cpp">
+      <Filter>소스 파일\ogldev</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="G_WindowMgr.h">
@@ -124,6 +145,42 @@
     </ClInclude>
     <ClInclude Include="G_CameraMgr.h">
       <Filter>헤더 파일\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="dependency\ogldev\ogldev_basic_lighting.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependency\ogldev\ogldev_basic_mesh.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependency\ogldev\ogldev_shadow_mapping_technique.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependency\ogldev\ogldev_skinned_mesh.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependency\ogldev\ogldev_skinning_technique.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependency\ogldev\ogldev_atb.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependency\ogldev\ogldev_engine_common.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependency\ogldev\ogldev_lights_common.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependency\ogldev\ogldev_material.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependency\ogldev\ogldev_mesh_common.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependency\ogldev\ogldev_new_lighting.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependency\ogldev\ogldev_keys.h">
+      <Filter>헤더 파일\ogldev</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

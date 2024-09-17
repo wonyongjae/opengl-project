@@ -28,9 +28,9 @@ bool init()
 
 void run()
 {
-	glEnable(GL_CULL_FACE);
 	glFrontFace(GL_CW);
 	glCullFace(GL_BACK);
+	glEnable(GL_CULL_FACE);
 	glEnable(GL_DEPTH_TEST);
 
 	while (!glfwWindowShouldClose(G_WindowMgr::getInstance().getWindow())) {
@@ -40,7 +40,7 @@ void run()
 		glClearColor(135.0f / 255.0f, 135.0f / 255.0f, 135.0f / 255.0f, 1.0f);
 
 		G_CameraMgr::getInstance().getCamera()->OnRender();
-		G_Renderer::getInstance().renderCube();
+		G_Renderer::getInstance().render();
 
 		// 이벤트 처리
 		glfwPollEvents();

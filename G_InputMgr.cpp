@@ -32,6 +32,9 @@ void G_InputMgr::keyboardCallback(GLFWwindow* arg_window, int arg_key, int arg_s
     case GLFW_KEY_D: std::cout << "D" << std::endl; break;
     default: break;
     }
+
+    BasicCamera* camera = G_CameraMgr::getInstance().getCamera();
+    camera->OnKeyboard(arg_key);
 }
 
 void G_InputMgr::mouseCursorPosCallback(GLFWwindow* arg_window, double arg_x, double arg_y)
@@ -63,4 +66,7 @@ void G_InputMgr::mouseButtonCallback(GLFWwindow* arg_window, int arg_button, int
 
     m_Mouse.x = (int)x;
     m_Mouse.y = (int)y;
+
+    BasicCamera* camera = G_CameraMgr::getInstance().getCamera();
+    camera->OnMouse(x, y);
 }
