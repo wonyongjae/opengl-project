@@ -1,10 +1,13 @@
 #pragma once
 #include <GL/glew.h>
 #include "G_CameraMgr.h"
-#include "dependency/ogldev/technique.h"
-#include "dependency/ogldev/ogldev_math_3d.h"
-#include "dependency/ogldev/ogldev_world_transform.h"
-
+//#include "dependencies/ogldev/technique.h"
+//#include "dependencies/ogldev/ogldev_math_3d.h"
+//#include "dependencies/ogldev/ogldev_world_transform.h"
+#include "dependencies/ogldev/ogldev_basic_mesh.h"
+#include "dependencies/ogldev/ogldev_new_lighting.h"
+#include "dependencies/ogldev/ogldev_engine_common.h"
+#include "G_CameraMgr.h"
 
 class G_Renderer
 {
@@ -28,5 +31,11 @@ public:
 private:
 	G_Renderer() {};
 	~G_Renderer() {};
+
+	void SwitchToLightingTech();
+
+	BasicMesh* m_pBasicMesh = nullptr;		// 3d box
+	LightingTechnique m_lightingTech;		// ±âº» ¸ðµ¨ ¼ÎÀÌ´õ
+	int m_subTech = LightingTechnique::SUBTECH_DEFAULT;
 };
 

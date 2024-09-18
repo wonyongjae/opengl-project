@@ -54,49 +54,49 @@
     <ClCompile Include="G_Renderer.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="dependency\ogldev\math_3d.cpp">
-      <Filter>소스 파일\ogldev</Filter>
-    </ClCompile>
-    <ClCompile Include="dependency\ogldev\ogldev_basic_glfw_camera.cpp">
-      <Filter>소스 파일\ogldev</Filter>
-    </ClCompile>
-    <ClCompile Include="dependency\ogldev\ogldev_texture.cpp">
-      <Filter>소스 파일\ogldev</Filter>
-    </ClCompile>
-    <ClCompile Include="dependency\ogldev\ogldev_util.cpp">
-      <Filter>소스 파일\ogldev</Filter>
-    </ClCompile>
-    <ClCompile Include="dependency\ogldev\ogldev_world_transform.cpp">
-      <Filter>소스 파일\ogldev</Filter>
-    </ClCompile>
-    <ClCompile Include="dependency\ogldev\technique.cpp">
-      <Filter>소스 파일\ogldev</Filter>
-    </ClCompile>
-    <ClCompile Include="dependency\ogldev\stb_image.cpp">
-      <Filter>소스 파일\ogldev</Filter>
-    </ClCompile>
     <ClCompile Include="G_CameraMgr.cpp">
       <Filter>소스 파일\manager</Filter>
     </ClCompile>
-    <ClCompile Include="dependency\ogldev\ogldev_basic_lighting.cpp">
+    <ClCompile Include="dependencies\ogldev\math_3d.cpp">
       <Filter>소스 파일\ogldev</Filter>
     </ClCompile>
-    <ClCompile Include="dependency\ogldev\ogldev_basic_mesh.cpp">
+    <ClCompile Include="dependencies\ogldev\ogldev_atb.cpp">
       <Filter>소스 파일\ogldev</Filter>
     </ClCompile>
-    <ClCompile Include="dependency\ogldev\ogldev_shadow_mapping_technique.cpp">
+    <ClCompile Include="dependencies\ogldev\ogldev_basic_glfw_camera.cpp">
       <Filter>소스 파일\ogldev</Filter>
     </ClCompile>
-    <ClCompile Include="dependency\ogldev\ogldev_skinned_mesh.cpp">
+    <ClCompile Include="dependencies\ogldev\ogldev_basic_lighting.cpp">
       <Filter>소스 파일\ogldev</Filter>
     </ClCompile>
-    <ClCompile Include="dependency\ogldev\ogldev_skinning_technique.cpp">
+    <ClCompile Include="dependencies\ogldev\ogldev_basic_mesh.cpp">
       <Filter>소스 파일\ogldev</Filter>
     </ClCompile>
-    <ClCompile Include="dependency\ogldev\ogldev_atb.cpp">
+    <ClCompile Include="dependencies\ogldev\ogldev_new_lighting.cpp">
       <Filter>소스 파일\ogldev</Filter>
     </ClCompile>
-    <ClCompile Include="dependency\ogldev\ogldev_new_lighting.cpp">
+    <ClCompile Include="dependencies\ogldev\ogldev_shadow_mapping_technique.cpp">
+      <Filter>소스 파일\ogldev</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\ogldev\ogldev_skinned_mesh.cpp">
+      <Filter>소스 파일\ogldev</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\ogldev\ogldev_skinning_technique.cpp">
+      <Filter>소스 파일\ogldev</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\ogldev\ogldev_texture.cpp">
+      <Filter>소스 파일\ogldev</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\ogldev\ogldev_util.cpp">
+      <Filter>소스 파일\ogldev</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\ogldev\ogldev_world_transform.cpp">
+      <Filter>소스 파일\ogldev</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\ogldev\stb_image.cpp">
+      <Filter>소스 파일\ogldev</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\ogldev\technique.cpp">
       <Filter>소스 파일\ogldev</Filter>
     </ClCompile>
   </ItemGroup>
@@ -116,79 +116,71 @@
     <ClInclude Include="G_Renderer.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="dependency\ogldev\ogldev_basic_glfw_camera.h">
-      <Filter>헤더 파일\ogldev</Filter>
-    </ClInclude>
-    <ClInclude Include="dependency\ogldev\ogldev_math_3d.h">
-      <Filter>헤더 파일\ogldev</Filter>
-    </ClInclude>
-    <ClInclude Include="dependency\ogldev\ogldev_texture.h">
-      <Filter>헤더 파일\ogldev</Filter>
-    </ClInclude>
-    <ClInclude Include="dependency\ogldev\ogldev_types.h">
-      <Filter>헤더 파일\ogldev</Filter>
-    </ClInclude>
-    <ClInclude Include="dependency\ogldev\ogldev_util.h">
-      <Filter>헤더 파일\ogldev</Filter>
-    </ClInclude>
-    <ClInclude Include="dependency\ogldev\ogldev_world_transform.h">
-      <Filter>헤더 파일\ogldev</Filter>
-    </ClInclude>
-    <ClInclude Include="dependency\ogldev\technique.h">
-      <Filter>헤더 파일\ogldev</Filter>
-    </ClInclude>
-    <ClInclude Include="dependency\ogldev\stb_image.h">
-      <Filter>헤더 파일\ogldev</Filter>
-    </ClInclude>
-    <ClInclude Include="dependency\ogldev\stb_image_write.h">
-      <Filter>헤더 파일\ogldev</Filter>
-    </ClInclude>
     <ClInclude Include="G_CameraMgr.h">
       <Filter>헤더 파일\manager</Filter>
     </ClInclude>
-    <ClInclude Include="dependency\ogldev\ogldev_basic_lighting.h">
+    <ClInclude Include="dependencies\ogldev\ogldev_atb.h">
       <Filter>헤더 파일\ogldev</Filter>
     </ClInclude>
-    <ClInclude Include="dependency\ogldev\ogldev_basic_mesh.h">
+    <ClInclude Include="dependencies\ogldev\ogldev_basic_glfw_camera.h">
       <Filter>헤더 파일\ogldev</Filter>
     </ClInclude>
-    <ClInclude Include="dependency\ogldev\ogldev_shadow_mapping_technique.h">
+    <ClInclude Include="dependencies\ogldev\ogldev_basic_lighting.h">
       <Filter>헤더 파일\ogldev</Filter>
     </ClInclude>
-    <ClInclude Include="dependency\ogldev\ogldev_skinned_mesh.h">
+    <ClInclude Include="dependencies\ogldev\ogldev_basic_mesh.h">
       <Filter>헤더 파일\ogldev</Filter>
     </ClInclude>
-    <ClInclude Include="dependency\ogldev\ogldev_skinning_technique.h">
+    <ClInclude Include="dependencies\ogldev\ogldev_engine_common.h">
       <Filter>헤더 파일\ogldev</Filter>
     </ClInclude>
-    <ClInclude Include="dependency\ogldev\ogldev_atb.h">
+    <ClInclude Include="dependencies\ogldev\ogldev_keys.h">
       <Filter>헤더 파일\ogldev</Filter>
     </ClInclude>
-    <ClInclude Include="dependency\ogldev\ogldev_engine_common.h">
+    <ClInclude Include="dependencies\ogldev\ogldev_lights_common.h">
       <Filter>헤더 파일\ogldev</Filter>
     </ClInclude>
-    <ClInclude Include="dependency\ogldev\ogldev_lights_common.h">
+    <ClInclude Include="dependencies\ogldev\ogldev_material.h">
       <Filter>헤더 파일\ogldev</Filter>
     </ClInclude>
-    <ClInclude Include="dependency\ogldev\ogldev_material.h">
+    <ClInclude Include="dependencies\ogldev\ogldev_math_3d.h">
       <Filter>헤더 파일\ogldev</Filter>
     </ClInclude>
-    <ClInclude Include="dependency\ogldev\ogldev_mesh_common.h">
+    <ClInclude Include="dependencies\ogldev\ogldev_mesh_common.h">
       <Filter>헤더 파일\ogldev</Filter>
     </ClInclude>
-    <ClInclude Include="dependency\ogldev\ogldev_new_lighting.h">
+    <ClInclude Include="dependencies\ogldev\ogldev_new_lighting.h">
       <Filter>헤더 파일\ogldev</Filter>
     </ClInclude>
-    <ClInclude Include="dependency\ogldev\ogldev_keys.h">
+    <ClInclude Include="dependencies\ogldev\ogldev_shadow_mapping_technique.h">
       <Filter>헤더 파일\ogldev</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\assets\shaders\cube.fs">
-      <Filter>리소스 파일\assets\shaders</Filter>
-    </None>
-    <None Include="resource\assets\shaders\cube.vs">
-      <Filter>리소스 파일\assets\shaders</Filter>
-    </None>
+    <ClInclude Include="dependencies\ogldev\ogldev_skinned_mesh.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\ogldev\ogldev_skinning_technique.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\ogldev\ogldev_texture.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\ogldev\ogldev_types.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\ogldev\ogldev_util.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\ogldev\ogldev_world_transform.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\ogldev\stb_image.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\ogldev\stb_image_write.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\ogldev\technique.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

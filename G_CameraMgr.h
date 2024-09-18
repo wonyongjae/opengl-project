@@ -1,6 +1,6 @@
 #pragma once
 #include "common.hpp"
-#include "dependency/ogldev/ogldev_basic_glfw_camera.h"
+#include "dependencies/ogldev/ogldev_basic_glfw_camera.h"
 
 class G_CameraMgr
 {
