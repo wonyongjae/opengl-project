@@ -8,6 +8,7 @@ x64/
 build/
 bin/
 dependencies/
+shaders/
 
 # OS 및 IDE 자동 생성 파일
 *.log
