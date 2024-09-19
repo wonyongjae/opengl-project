@@ -7,6 +7,7 @@
 #include "dependencies/ogldev/ogldev_basic_mesh.h"
 #include "dependencies/ogldev/ogldev_new_lighting.h"
 #include "dependencies/ogldev/ogldev_engine_common.h"
+#include "G_Scene.h"
 #include "G_CameraMgr.h"
 
 class G_Renderer

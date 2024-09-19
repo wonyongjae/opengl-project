@@ -37,6 +37,12 @@
     <Filter Include="리소스 파일\assets\models">
       <UniqueIdentifier>{9efb1568-3d7d-4ec5-81cd-03c023a53278}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\shader">
+      <UniqueIdentifier>{7610be74-deaa-47de-a48b-387e16c70044}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\shader">
+      <UniqueIdentifier>{f47e1dc2-e7e6-4122-be47-eb31824ccfef}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -98,6 +104,12 @@
     </ClCompile>
     <ClCompile Include="dependencies\ogldev\technique.cpp">
       <Filter>소스 파일\ogldev</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies\ogldev\ogldev_framebuffer.cpp">
+      <Filter>소스 파일\ogldev</Filter>
+    </ClCompile>
+    <ClCompile Include="default_fbo_technique.cpp">
+      <Filter>소스 파일\shader</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -182,5 +194,28 @@
     <ClInclude Include="dependencies\ogldev\technique.h">
       <Filter>헤더 파일\ogldev</Filter>
     </ClInclude>
+    <ClInclude Include="dependencies\ogldev\ogldev_framebuffer.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="default_fbo_technique.h">
+      <Filter>헤더 파일\shader</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\ogldev\ogldev_save_viewport.h">
+      <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resource\assets\shaders\default_FBO.fs">
+      <Filter>리소스 파일\assets\shaders</Filter>
+    </None>
+    <None Include="resource\assets\shaders\default_FBO.vs">
+      <Filter>리소스 파일\assets\shaders</Filter>
+    </None>
+    <None Include="resource\assets\shaders\lighting_new.fs">
+      <Filter>리소스 파일\assets\shaders</Filter>
+    </None>
+    <None Include="resource\assets\shaders\skinning.vs">
+      <Filter>리소스 파일\assets\shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>

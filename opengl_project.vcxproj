@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="default_fbo_technique.cpp" />
     <ClCompile Include="dependencies\ogldev\math_3d.cpp" />
     <ClCompile Include="dependencies\ogldev\ogldev_atb.cpp" />
     <ClCompile Include="dependencies\ogldev\ogldev_basic_glfw_camera.cpp" />
     <ClCompile Include="dependencies\ogldev\ogldev_basic_lighting.cpp" />
     <ClCompile Include="dependencies\ogldev\ogldev_basic_mesh.cpp" />
+    <ClCompile Include="dependencies\ogldev\ogldev_framebuffer.cpp" />
     <ClCompile Include="dependencies\ogldev\ogldev_new_lighting.cpp" />
     <ClCompile Include="dependencies\ogldev\ogldev_shadow_mapping_technique.cpp" />
     <ClCompile Include="dependencies\ogldev\ogldev_skinned_mesh.cpp" />
@@ -150,17 +152,20 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.hpp" />
+    <ClInclude Include="default_fbo_technique.h" />
     <ClInclude Include="dependencies\ogldev\ogldev_atb.h" />
     <ClInclude Include="dependencies\ogldev\ogldev_basic_glfw_camera.h" />
     <ClInclude Include="dependencies\ogldev\ogldev_basic_lighting.h" />
     <ClInclude Include="dependencies\ogldev\ogldev_basic_mesh.h" />
     <ClInclude Include="dependencies\ogldev\ogldev_engine_common.h" />
+    <ClInclude Include="dependencies\ogldev\ogldev_framebuffer.h" />
     <ClInclude Include="dependencies\ogldev\ogldev_keys.h" />
     <ClInclude Include="dependencies\ogldev\ogldev_lights_common.h" />
     <ClInclude Include="dependencies\ogldev\ogldev_material.h" />
     <ClInclude Include="dependencies\ogldev\ogldev_math_3d.h" />
     <ClInclude Include="dependencies\ogldev\ogldev_mesh_common.h" />
     <ClInclude Include="dependencies\ogldev\ogldev_new_lighting.h" />
+    <ClInclude Include="dependencies\ogldev\ogldev_save_viewport.h" />
     <ClInclude Include="dependencies\ogldev\ogldev_shadow_mapping_technique.h" />
     <ClInclude Include="dependencies\ogldev\ogldev_skinned_mesh.h" />
     <ClInclude Include="dependencies\ogldev\ogldev_skinning_technique.h" />
@@ -176,6 +181,12 @@
     <ClInclude Include="G_Renderer.h" />
     <ClInclude Include="G_Scene.h" />
     <ClInclude Include="G_WindowMgr.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resource\assets\shaders\default_FBO.fs" />
+    <None Include="resource\assets\shaders\default_FBO.vs" />
+    <None Include="resource\assets\shaders\lighting_new.fs" />
+    <None Include="resource\assets\shaders\skinning.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

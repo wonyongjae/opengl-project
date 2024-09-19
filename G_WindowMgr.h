@@ -1,8 +1,8 @@
 #pragma once
+#include "common.hpp"
 #include "iostream"
 #include "GL/glew.h"
 #include "GLFW/glfw3.h"
-#include "common.hpp"
 
 class G_WindowMgr
 {

@@ -1,6 +1,7 @@
 #include "iostream"
 #include "G_WindowMgr.h"
 #include "G_InputMgr.h"
+#include "G_Scene.h"
 #include "G_CameraMgr.h"
 #include "G_Renderer.h"
 
@@ -13,6 +14,10 @@ bool init()
 
 	bool init_input  = G_InputMgr::getInstance().init(G_WindowMgr::getInstance().getWindow());
 	if (!init_input)
+		return false;
+
+	bool init_scene = G_Scene::getInstance().init();
+	if (!init_scene)
 		return false;
 
 	bool init_camera = G_CameraMgr::getInstance().init();
@@ -40,7 +45,10 @@ void run()
 		glClearColor(135.0f / 255.0f, 135.0f / 255.0f, 135.0f / 255.0f, 1.0f);
 
 		G_CameraMgr::getInstance().getCamera()->OnRender();
+		
+		//G_Scene::getInstance().defaultFBOWrite();
 		G_Renderer::getInstance().render();
+		//G_Scene::getInstance().defaultFBODraw();
 
 		// 이벤트 처리
 		glfwPollEvents();
