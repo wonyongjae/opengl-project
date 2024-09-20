@@ -36,8 +36,8 @@ private:
 	G_Scene() {};
 	~G_Scene() {};
 
-	unsigned int quadVAO = 0;
-	unsigned int quadVBO = 0;
+	unsigned int quadVAO;
+	unsigned int quadVBO;
 
 	Framebuffer m_DefaultFBO;
 	FBOTechnique m_DefaultFBOTech;

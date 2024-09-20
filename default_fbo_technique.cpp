@@ -21,6 +21,8 @@ bool FBOTechnique::Init()
 
     m_SamplerLoc = GetUniformLocation("gSampler");
 
+    if (m_SamplerLoc == INVALID_UNIFORM_LOCATION)
+        return false;
 
     return true;
 }

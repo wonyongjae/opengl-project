@@ -14,9 +14,10 @@ bool G_Scene::init()
         glBindTextureUnit(DEFAULT_FBO_TEXTURE_UNIT - GL_TEXTURE0, m_DefaultFBO.GetTexture());
     }
     else {
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(DEFAULT_FBO_TEXTURE_UNIT - GL_TEXTURE_2D, m_DefaultFBO.GetTexture());
+        glActiveTexture(DEFAULT_FBO_TEXTURE_UNIT - GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, m_DefaultFBO.GetTexture());
     }
+
     return true;
 }
 
@@ -64,7 +65,7 @@ void G_Scene::renderQuad()
     }
     glBindVertexArray(quadVAO);
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 6);
-    glDisableVertexAttribArray(0);
-    glDisableVertexAttribArray(1);
+    //glDisableVertexAttribArray(0);
+    //glDisableVertexAttribArray(1);
     glBindVertexArray(0);
 }

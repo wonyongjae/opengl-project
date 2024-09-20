@@ -37,21 +37,21 @@ void run()
 	glCullFace(GL_BACK);
 	glEnable(GL_CULL_FACE);
 	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_ALPHA_TEST);
 
 	while (!glfwWindowShouldClose(G_WindowMgr::getInstance().getWindow())) {
-		// 버퍼와 렌더링 로직을 여기에 추가합니다.
+
+		// 이벤트 처리
+		glfwPollEvents();
 
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		glClearColor(135.0f / 255.0f, 135.0f / 255.0f, 135.0f / 255.0f, 1.0f);
 
 		G_CameraMgr::getInstance().getCamera()->OnRender();
-		
-		//G_Scene::getInstance().defaultFBOWrite();
-		G_Renderer::getInstance().render();
-		//G_Scene::getInstance().defaultFBODraw();
 
-		// 이벤트 처리
-		glfwPollEvents();
+		G_Scene::getInstance().defaultFBOWrite();
+		G_Renderer::getInstance().render();
+		G_Scene::getInstance().defaultFBODraw();
 
 		// Swap buffers
 		glfwSwapBuffers(G_WindowMgr::getInstance().getWindow());

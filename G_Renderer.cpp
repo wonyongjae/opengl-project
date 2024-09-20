@@ -28,10 +28,6 @@ bool G_Renderer::init()
 
 void G_Renderer::render()
 {
-    //glBindFramebuffer(GL_FRAMEBUFFER, G_Scene::getInstance().getDefaultFBO().GetFBO());
-    //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    //glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
-
     SwitchToLightingTech();
 
     BasicCamera* camera = G_CameraMgr::getInstance().getCamera();
