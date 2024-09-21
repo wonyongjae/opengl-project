@@ -111,6 +111,9 @@
     <ClCompile Include="default_fbo_technique.cpp">
       <Filter>소스 파일\shader</Filter>
     </ClCompile>
+    <ClCompile Include="G_Lights.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="G_WindowMgr.h">
@@ -202,6 +205,9 @@
     </ClInclude>
     <ClInclude Include="dependencies\ogldev\ogldev_save_viewport.h">
       <Filter>헤더 파일\ogldev</Filter>
+    </ClInclude>
+    <ClInclude Include="G_Lights.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

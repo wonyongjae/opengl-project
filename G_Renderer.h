@@ -1,14 +1,12 @@
 #pragma once
 #include <GL/glew.h>
 #include "G_CameraMgr.h"
-//#include "dependencies/ogldev/technique.h"
-//#include "dependencies/ogldev/ogldev_math_3d.h"
-//#include "dependencies/ogldev/ogldev_world_transform.h"
 #include "dependencies/ogldev/ogldev_basic_mesh.h"
 #include "dependencies/ogldev/ogldev_new_lighting.h"
 #include "dependencies/ogldev/ogldev_engine_common.h"
-#include "G_Scene.h"
 #include "G_CameraMgr.h"
+#include "G_Scene.h"
+#include "G_Lights.h"
 
 class G_Renderer
 {
@@ -29,6 +27,13 @@ public:
 
 	// 임시
 	void render();
+
+	/* 태양광(단방향 빛) 설정 */
+	void SetDirectionalLight(const DirectionalLight& arg_dir_light);
+	/* 태양광(단방향 빛)의 방향 업데이트 */
+	void UpdateDirectionalLightDir(const Vector3f& arg_world_dir);
+
+
 private:
 	G_Renderer() {};
 	~G_Renderer() {};
@@ -36,7 +41,11 @@ private:
 	void SwitchToLightingTech();
 
 	BasicMesh* m_pBasicMesh = nullptr;		// 3d box
-	LightingTechnique m_lightingTech;		// 기본 모델 셰이더
-	int m_subTech = LightingTechnique::SUBTECH_DEFAULT;
+	LightingTechnique m_LightingTech;		// 기본 모델 셰이더
+	int m_SubTech = LightingTechnique::SUBTECH_DEFAULT;
+
+	DirectionalLight m_DirectionalLight;
+
+
 };
 
