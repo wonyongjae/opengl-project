@@ -43,6 +43,15 @@
     <Filter Include="소스 파일\shader">
       <UniqueIdentifier>{f47e1dc2-e7e6-4122-be47-eb31824ccfef}</UniqueIdentifier>
     </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{b6c6477f-dbbc-49c8-8c86-1f9afdb2b85d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\terrain">
+      <UniqueIdentifier>{a8a509ed-5baa-4e84-af75-34be973a1474}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\terrain">
+      <UniqueIdentifier>{4523182e-0a9a-4451-88f3-d843de6cfc2a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -114,13 +123,16 @@
     <ClCompile Include="G_Lights.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="G_ModelMgr.cpp">
+      <Filter>소스 파일\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="G_TerrainMgr.cpp">
+      <Filter>소스 파일\manager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="G_WindowMgr.h">
       <Filter>헤더 파일\manager</Filter>
-    </ClInclude>
-    <ClInclude Include="common.hpp">
-      <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="G_Scene.h">
       <Filter>헤더 파일</Filter>
@@ -208,6 +220,18 @@
     </ClInclude>
     <ClInclude Include="G_Lights.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="G_TerrainMgr.h">
+      <Filter>헤더 파일\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="G_ModelMgr.h">
+      <Filter>헤더 파일\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="common.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="model_path.hpp">
+      <Filter>common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

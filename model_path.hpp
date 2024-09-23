@@ -1,0 +1,1 @@
+#define MODEL_BOX "resource/assets/models/box/box.obj"

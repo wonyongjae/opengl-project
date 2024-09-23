@@ -146,8 +146,10 @@
     <ClCompile Include="G_CameraMgr.cpp" />
     <ClCompile Include="G_InputMgr.cpp" />
     <ClCompile Include="G_Lights.cpp" />
+    <ClCompile Include="G_ModelMgr.cpp" />
     <ClCompile Include="G_Renderer.cpp" />
     <ClCompile Include="G_Scene.cpp" />
+    <ClCompile Include="G_TerrainMgr.cpp" />
     <ClCompile Include="G_WindowMgr.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -180,9 +182,12 @@
     <ClInclude Include="G_CameraMgr.h" />
     <ClInclude Include="G_InputMgr.h" />
     <ClInclude Include="G_Lights.h" />
+    <ClInclude Include="G_ModelMgr.h" />
     <ClInclude Include="G_Renderer.h" />
     <ClInclude Include="G_Scene.h" />
+    <ClInclude Include="G_TerrainMgr.h" />
     <ClInclude Include="G_WindowMgr.h" />
+    <ClInclude Include="model_path.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="resource\assets\shaders\default_FBO.fs" />

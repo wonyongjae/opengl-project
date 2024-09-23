@@ -3,11 +3,11 @@
 
 bool G_Renderer::init()
 {
-    m_pBasicMesh = new BasicMesh();
-    m_pBasicMesh->LoadMesh("resource/assets/models/box/box.obj");
-    m_pBasicMesh->SetRotation(0.0f, 0.0f, 0.0f);
-    m_pBasicMesh->SetPosition(0.0f, 0.0f, 0.0f);
-    m_pBasicMesh->SetScale(1.0f);
+    //m_pBasicMesh = new BasicMesh();
+    //m_pBasicMesh->LoadMesh("resource/assets/models/box/box.obj");
+    //m_pBasicMesh->SetRotation(0.0f, 0.0f, 0.0f);
+    //m_pBasicMesh->SetPosition(0.0f, 0.0f, 0.0f);
+    //m_pBasicMesh->SetScale(1.0f);
 
     if (!m_LightingTech.Init(m_SubTech)) {
         printf("Error initializing the lighting technique\n");
@@ -43,22 +43,29 @@ void G_Renderer::render()
 {
     SwitchToLightingTech();
 
+    BasicMesh& b_mseh = G_ModelMgr::getInstance().getBasicModelTable(0);
+    b_mseh.SetRotation(0.0f, 0.0f, 0.0f);
+    b_mseh.SetPosition(0.0f, 0.0f, 0.0f);
+    b_mseh.SetScale(1.0f);
+
     BasicCamera* camera = G_CameraMgr::getInstance().getCamera();
-    WorldTrans& meshWorldTransform = m_pBasicMesh->GetWorldTransform();
+    WorldTrans& meshWorldTransform = b_mseh.GetWorldTransform();
     Matrix4f World = meshWorldTransform.GetMatrix();
     Matrix4f View = camera->GetMatrix();
     Matrix4f Projection = camera->GetProjectionMat();
     Matrix4f WVP = Projection * View * World;
 
     m_LightingTech.SetWVP(WVP);
-    m_LightingTech.SetMaterial(m_pBasicMesh->GetMaterial());
+    m_LightingTech.SetMaterial(b_mseh.GetMaterial());
     m_LightingTech.SetPBR(false);
-    Vector3f CameraLocalPos3f = m_pBasicMesh->GetWorldTransform().WorldPosToLocalPos(camera->GetPos());
+    Vector3f CameraLocalPos3f = b_mseh.GetWorldTransform().WorldPosToLocalPos(camera->GetPos());
     m_LightingTech.SetCameraLocalPos(CameraLocalPos3f);
     m_LightingTech.SetCameraWorldPos(camera->GetPos());
     m_LightingTech.SetWorldMatrix(World);
 
-    m_pBasicMesh->Render();
+    b_mseh.Render();
+
+    //m_pBasicMesh->Render();
 }
 
 void G_Renderer::SwitchToLightingTech()
