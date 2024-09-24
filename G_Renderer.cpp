@@ -41,6 +41,8 @@ void G_Renderer::UpdateDirectionalLightDir(const Vector3f& arg_world_dir)
 
 void G_Renderer::render()
 {
+    BasicCamera* camera = G_CameraMgr::getInstance().getCamera();
+
     SwitchToLightingTech();
 
     BasicMesh& b_mseh = G_ModelMgr::getInstance().getBasicModelTable(0);
@@ -48,24 +50,47 @@ void G_Renderer::render()
     b_mseh.SetPosition(0.0f, 0.0f, 0.0f);
     b_mseh.SetScale(1.0f);
 
-    BasicCamera* camera = G_CameraMgr::getInstance().getCamera();
-    WorldTrans& meshWorldTransform = b_mseh.GetWorldTransform();
-    Matrix4f World = meshWorldTransform.GetMatrix();
-    Matrix4f View = camera->GetMatrix();
-    Matrix4f Projection = camera->GetProjectionMat();
-    Matrix4f WVP = Projection * View * World;
+    WorldTrans& modelMeshWorldTransform = b_mseh.GetWorldTransform();
+    Matrix4f bWorld = modelMeshWorldTransform.GetMatrix();
+    Matrix4f bView = camera->GetMatrix();
+    Matrix4f bProjection = camera->GetProjectionMat();
+    Matrix4f bWVP = bProjection * bView * bWorld;
 
-    m_LightingTech.SetWVP(WVP);
+    m_LightingTech.SetWVP(bWVP);
     m_LightingTech.SetMaterial(b_mseh.GetMaterial());
     m_LightingTech.SetPBR(false);
-    Vector3f CameraLocalPos3f = b_mseh.GetWorldTransform().WorldPosToLocalPos(camera->GetPos());
-    m_LightingTech.SetCameraLocalPos(CameraLocalPos3f);
+    Vector3f bCameraLocalPos3f = b_mseh.GetWorldTransform().WorldPosToLocalPos(camera->GetPos());
+    m_LightingTech.SetCameraLocalPos(bCameraLocalPos3f);
     m_LightingTech.SetCameraWorldPos(camera->GetPos());
-    m_LightingTech.SetWorldMatrix(World);
+    m_LightingTech.SetWorldMatrix(bWorld);
 
     b_mseh.Render();
 
-    //m_pBasicMesh->Render();
+
+
+
+    SwitchToLightingTech();
+
+    BasicMesh& t_mseh = G_TerrainMgr::getInstance().getTerrainTable(0);
+    t_mseh.SetRotation(0.0f, 0.0f, 0.0f);
+    t_mseh.SetPosition(0.0f, -1.0f, 0.0f);
+    t_mseh.SetScale(1.0f);
+
+    WorldTrans& terrainMeshWorldTransform = t_mseh.GetWorldTransform();
+    Matrix4f tWorld = terrainMeshWorldTransform.GetMatrix();
+    Matrix4f tView = camera->GetMatrix();
+    Matrix4f tProjection = camera->GetProjectionMat();
+    Matrix4f tWVP = tProjection * tView * tWorld;
+
+    m_LightingTech.SetWVP(tWVP);
+    m_LightingTech.SetMaterial(t_mseh.GetMaterial());
+    m_LightingTech.SetPBR(false);
+    Vector3f tCameraLocalPos3f = t_mseh.GetWorldTransform().WorldPosToLocalPos(camera->GetPos());
+    m_LightingTech.SetCameraLocalPos(tCameraLocalPos3f);
+    m_LightingTech.SetCameraWorldPos(camera->GetPos());
+    m_LightingTech.SetWorldMatrix(tWorld);
+
+    t_mseh.Render();
 }
 
 void G_Renderer::SwitchToLightingTech()

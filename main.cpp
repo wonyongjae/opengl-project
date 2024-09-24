@@ -4,6 +4,7 @@
 #include "G_InputMgr.h"
 #include "G_CameraMgr.h"
 #include "G_ModelMgr.h"
+#include "G_TerrainMgr.h"
 
 #include "G_Scene.h"
 #include "G_Lights.h"
@@ -26,6 +27,10 @@ bool init()
 
 	bool init_model = G_ModelMgr::getInstance().init();
 	if (!init_model)
+		return false;
+
+	bool init_terrain = G_TerrainMgr::getInstance().init();
+	if (!init_terrain)
 		return false;
 
 	bool init_scene = G_Scene::getInstance().init();

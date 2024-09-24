@@ -188,6 +188,7 @@
     <ClInclude Include="G_TerrainMgr.h" />
     <ClInclude Include="G_WindowMgr.h" />
     <ClInclude Include="model_path.hpp" />
+    <ClInclude Include="terrain_path.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="resource\assets\shaders\default_FBO.fs" />

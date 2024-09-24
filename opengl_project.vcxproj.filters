@@ -233,6 +233,9 @@
     <ClInclude Include="model_path.hpp">
       <Filter>common</Filter>
     </ClInclude>
+    <ClInclude Include="terrain_path.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="resource\assets\shaders\default_FBO.fs">

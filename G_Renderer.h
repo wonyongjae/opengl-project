@@ -4,6 +4,7 @@
 #include "dependencies/ogldev/ogldev_engine_common.h"
 #include "G_CameraMgr.h"
 #include "G_ModelMgr.h"
+#include "G_TerrainMgr.h"
 #include "G_Scene.h"
 #include "G_Lights.h"
 
