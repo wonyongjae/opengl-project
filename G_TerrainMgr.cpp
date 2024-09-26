@@ -7,7 +7,7 @@ bool G_TerrainMgr::init()
     return true;
 }
 
-BasicMesh& G_TerrainMgr::getTerrainTable(unsigned int arg_terrain_index)
+BasicMesh& G_TerrainMgr::getTerrainModel(unsigned int arg_terrain_index)
 {
 	auto terrain_it = m_TerrainTable.find(arg_terrain_index);
 	return *terrain_it->second;

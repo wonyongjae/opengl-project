@@ -3,7 +3,7 @@
 #include <vector>
 #include <iostream>
 #include "model_path.hpp"
-#include "dependencies/ogldev/ogldev_basic_mesh.h"
+#include "dependencies/ogldev/ogldev_skinned_mesh.h"
 
 class G_ModelMgr
 {
@@ -22,7 +22,9 @@ public:
 	/* √ ±‚»≠ */
 	bool init();
 
-	BasicMesh& getBasicModelTable(unsigned int arg_model_index);
+	BasicMesh& getBasicModel(unsigned int arg_model_index);
+
+	SkinnedMesh& getSkinnedModel(unsigned int arg_model_index);
 
 private:
 	G_ModelMgr() {};
@@ -30,6 +32,12 @@ private:
 
 	bool modelAllLoad();
 
+	bool basicModelLoad(const char* arg_model_path);
+
+	bool skinnedModelLoad(const char* arg_model_path);
+
 	std::map<unsigned int, BasicMesh*> m_BasicModelTable;
+
+	std::map<unsigned int, SkinnedMesh*> m_SkinnedModelTable;
 };
 

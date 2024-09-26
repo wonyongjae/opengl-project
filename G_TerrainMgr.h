@@ -22,7 +22,7 @@ public:
 	/* ÃÊ±âÈ­ */
 	bool init();
 
-	BasicMesh& getTerrainTable(unsigned int arg_terrain_index);
+	BasicMesh& getTerrainModel(unsigned int arg_terrain_index);
 
 private:
 	G_TerrainMgr() {};

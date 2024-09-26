@@ -48,7 +48,7 @@ bool init()
 	bool init_renderer = G_Renderer::getInstance().init();
 	if (!init_renderer)
 		return false;
-	G_Renderer::getInstance().SetDirectionalLight(g_DirectionalLight);
+	G_Renderer::getInstance().setDirectionalLight(g_DirectionalLight);
 
 	return true;
 };
@@ -61,6 +61,9 @@ void run()
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_ALPHA_TEST);
 
+
+	long long last_t = 0;
+
 	while (!glfwWindowShouldClose(G_WindowMgr::getInstance().getWindow())) {
 
 		// 이벤트 처리
@@ -69,10 +72,14 @@ void run()
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		glClearColor(135.0f / 255.0f, 135.0f / 255.0f, 135.0f / 255.0f, 1.0f);
 
+		// 매 프레임 타임 계산
+		long long curr_t = GetCurrentTimeMillis();
+		float delta_t = ((float)(curr_t - last_t)) / 1000.0f;
+
 		G_CameraMgr::getInstance().getCamera()->OnRender();
 
 		G_Scene::getInstance().defaultFBOWrite();
-		G_Renderer::getInstance().render();
+		G_Renderer::getInstance().render(delta_t);
 		G_Scene::getInstance().defaultFBODraw();
 
 		// Swap buffers

@@ -1,1 +1,1 @@
-#define MODEL_GROUND "resource/assets/models/terrain/terrain_rock_boulder_cracked.obj"
+#define MODEL_GROUND "resource/assets/terrains/terrain_rock_boulder_cracked.obj"
