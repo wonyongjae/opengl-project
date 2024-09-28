@@ -69,6 +69,23 @@ bool G_Renderer::skinnigTechInit()
     return true;
 }
 
+void G_Renderer::refreshLightingPosAndDirs(BasicMesh& arg_mesh)
+{
+    WorldTrans& meshWorldTransform = arg_mesh.GetWorldTransform();
+
+    if (m_DirectionalLight.DiffuseIntensity > 0.0) {
+        m_DirectionalLight.CalcLocalDirection(meshWorldTransform);
+    }
+
+    for (uint i = 0; i < m_PointLightCnt; i++) {
+        m_PointLights[i].CalcLocalPosition(meshWorldTransform);
+    }
+
+    for (uint i = 0; i < m_SpotLightCnt; i++) {
+        m_SpotLights[i].CalcLocalDirectionAndPosition(meshWorldTransform);
+    }
+}
+
 void G_Renderer::switchToLightingTech()
 {
     GLint cur_prog = 0;
@@ -133,6 +150,17 @@ void G_Renderer::renderSkinnedModel(SkinnedMesh& arg_skinned_mseh, const float& 
     projection.InitPersProjTransform(camera->GetPersProjInfo());
     Matrix4f wvp = projection * view * world;
     m_SkinningTech.SetWVP(wvp);
+
+    refreshLightingPosAndDirs(arg_skinned_mseh);
+
+    if (m_DirectionalLight.DiffuseIntensity > 0.0) {
+        m_SkinningTech.UpdateDirLightDirection(m_DirectionalLight);
+    }
+
+    m_SkinningTech.UpdatePointLightsPos(m_PointLightCnt, m_PointLights);
+
+    m_SkinningTech.UpdateSpotLightsPosAndDir(m_SpotLightCnt, m_SpotLights);
+
     m_SkinningTech.SetMaterial(arg_skinned_mseh.GetMaterial());
 
     Vector3f cameraLocalPos3f = worldTransform.WorldPosToLocalPos(camera->GetPos());

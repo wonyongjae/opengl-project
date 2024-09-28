@@ -42,17 +42,26 @@ private:
 	bool lightingTechInit();
 	bool skinnigTechInit();
 
+	void refreshLightingPosAndDirs(BasicMesh& arg_mesh);
+
 	void switchToLightingTech();
 	void switchToSkinningTech();
 
 	void renderBasicModel(BasicMesh& arg_basic_mseh);
 	void renderSkinnedModel(SkinnedMesh& arg_skinned_mseh, const float& arg_t);
 
+	DirectionalLight m_DirectionalLight;
+
+	uint m_PointLightCnt = 0;
+	PointLight m_PointLights[LightingTechnique::MAX_POINT_LIGHTS];
+
+	uint m_SpotLightCnt = 0;
+	SpotLight m_SpotLights[LightingTechnique::MAX_SPOT_LIGHTS];
+
+
 	LightingTechnique m_LightingTech;		// ±‚∫ª ∏µ® ºŒ¿Ã¥ı
 	int m_SubTech = LightingTechnique::SUBTECH_DEFAULT;
 	SkinningTechnique m_SkinningTech;		// æ÷¥œ∏ﬁ¿Ãº« ∏µ® ºŒ¿Ã¥ı
-	DirectionalLight m_DirectionalLight;
-
 
 };
 

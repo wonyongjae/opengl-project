@@ -145,6 +145,7 @@
     <ClCompile Include="dependencies\ogldev\technique.cpp" />
     <ClCompile Include="G_CameraMgr.cpp" />
     <ClCompile Include="G_InputMgr.cpp" />
+    <ClCompile Include="G_InstanceMgr.cpp" />
     <ClCompile Include="G_Lights.cpp" />
     <ClCompile Include="G_ModelMgr.cpp" />
     <ClCompile Include="G_Renderer.cpp" />
@@ -181,6 +182,7 @@
     <ClInclude Include="dependencies\ogldev\technique.h" />
     <ClInclude Include="G_CameraMgr.h" />
     <ClInclude Include="G_InputMgr.h" />
+    <ClInclude Include="G_InstanceMgr.h" />
     <ClInclude Include="G_Lights.h" />
     <ClInclude Include="G_ModelMgr.h" />
     <ClInclude Include="G_Renderer.h" />

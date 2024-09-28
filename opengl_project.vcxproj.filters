@@ -129,6 +129,9 @@
     <ClCompile Include="G_TerrainMgr.cpp">
       <Filter>소스 파일\manager</Filter>
     </ClCompile>
+    <ClCompile Include="G_InstanceMgr.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="G_WindowMgr.h">
@@ -235,6 +238,9 @@
     </ClInclude>
     <ClInclude Include="terrain_path.hpp">
       <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="G_InstanceMgr.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
