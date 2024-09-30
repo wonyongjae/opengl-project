@@ -66,3 +66,14 @@ SkinnedMesh& G_ModelMgr::getSkinnedModel(unsigned int arg_model_index)
 	auto model_it = m_SkinnedModelTable.find(arg_model_index);
 	return *model_it->second;
 }
+
+std::map<unsigned int, BasicMesh*>& G_ModelMgr::getBasicModelTable()
+{
+	return m_BasicModelTable;
+}
+
+
+std::map<unsigned int, SkinnedMesh*>& G_ModelMgr::getSkinnedModelTable()
+{
+	return m_SkinnedModelTable;
+}

@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="common_struct.hpp" />
     <ClCompile Include="default_fbo_technique.cpp" />
     <ClCompile Include="dependencies\ogldev\math_3d.cpp" />
     <ClCompile Include="dependencies\ogldev\ogldev_atb.cpp" />

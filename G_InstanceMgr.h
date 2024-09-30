@@ -1,4 +1,6 @@
 #pragma once
+#include "G_ModelMgr.h"
+#include "common_struct.hpp"
 
 class G_InstanceMgr
 {
@@ -17,8 +19,17 @@ public:
 	/* √ ±‚»≠ */
 	bool init();
 
+	std::map<int, std::vector<BasicModelInstance>>& getBasicInstTable();
+
+	std::map<int, std::vector<SkinnedModelInstance>>& getSkinnedInstTable();
+
 private:
 	G_InstanceMgr() {};
 	~G_InstanceMgr() {};
+
+	std::map<int, std::vector<BasicModelInstance>> ma_BasicInstTable;
+
+	std::map<int, std::vector<SkinnedModelInstance>> ma_SkinnedInstTable;
+
 };
 

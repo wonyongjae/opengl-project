@@ -26,6 +26,10 @@ public:
 
 	SkinnedMesh& getSkinnedModel(unsigned int arg_model_index);
 
+	std::map<unsigned int, BasicMesh*>& getBasicModelTable();
+
+	std::map<unsigned int, SkinnedMesh*>& getSkinnedModelTable();
+
 private:
 	G_ModelMgr() {};
 	~G_ModelMgr();

@@ -157,9 +157,17 @@ void G_Renderer::renderSkinnedModel(SkinnedMesh& arg_skinned_mseh, const float& 
         m_SkinningTech.UpdateDirLightDirection(m_DirectionalLight);
     }
 
-    m_SkinningTech.UpdatePointLightsPos(m_PointLightCnt, m_PointLights);
+    //m_SpotLights[0].WorldPosition = camera->GetPos();
+    //m_SpotLights[0].WorldDirection = camera->GetTarget();
+    //m_SpotLights[0].CalcLocalDirectionAndPosition(worldTransform);
+    //m_SpotLights[1].WorldPosition = Vector3f(0.0f, 1.0f, 0.0f);
+    //m_SpotLights[1].WorldDirection = Vector3f(0.0f, -1.0f, 0.0f);
+    //m_SpotLights[1].CalcLocalDirectionAndPosition(worldTransform);
+    //m_SkinningTech.SetSpotLights(2, m_SpotLights);
 
-    m_SkinningTech.UpdateSpotLightsPosAndDir(m_SpotLightCnt, m_SpotLights);
+    //m_SkinningTech.UpdatePointLightsPos(m_PointLightCnt, m_PointLights);
+
+    //m_SkinningTech.UpdateSpotLightsPosAndDir(m_SpotLightCnt, m_SpotLights);
 
     m_SkinningTech.SetMaterial(arg_skinned_mseh.GetMaterial());
 
